@@ -84,4 +84,4 @@ This project strictly follows the 42 School Norm coding guidelines, which signif
 
 All the theoretical material used to develop this project is organized and can be accessed directly via the link below:
 
-<h3 align="center"><a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#01-ft_Printf">-----ft_printf Theoretical-----</a></h3>
+<h3 align="center"><a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#01-ft_Printf">-----ft_Printf Theoretical-----</a></h3>
