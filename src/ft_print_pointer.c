@@ -1,16 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print.pointer.c                                 :+:      :+:    :+:   */
+/*   ft_print_pointer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivbatist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:45:49 by ivbatist          #+#    #+#             */
-/*   Updated: 2022/12/23 22:47:40 by ivbatist         ###   ########.fr       */
+/*   Updated: 2024/09/21 00:31:27 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../inc/ft_printf.h"
+#include "../libft/libft/inc/libft.h"
 
 int	ft_length_pointer(uintptr_t n)
 {
@@ -25,11 +26,6 @@ int	ft_length_pointer(uintptr_t n)
 	return (length);
 }
 
-int	ft_putchar_fd(char c, int fd)
-{
-	write(fd, &c, 1);
-	return (1);
-}
 
 void	ft_ptr(uintptr_t ptr)
 {

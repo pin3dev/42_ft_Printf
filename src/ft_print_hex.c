@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivbatist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:45:09 by ivbatist          #+#    #+#             */
-/*   Updated: 2022/12/23 22:45:25 by ivbatist         ###   ########.fr       */
+/*   Updated: 2024/09/21 00:29:47 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../inc/ft_printf.h"
+#include "../libft/libft/inc/libft.h"
 
 int	ft_print_hex(unsigned int n, int c)
 {
@@ -25,13 +26,13 @@ int	ft_print_hex(unsigned int n, int c)
 	else
 	{
 		if (n <= 9)
-			count += ft_putchar((n + '0'));
+			count += ft_putchar_v2((n + '0'));
 		else
 		{
 			if (c == 'x')
-				count += ft_putchar((n - 10 + 'a'));
+				count += ft_putchar_v2((n - 10 + 'a'));
 			if (c == 'X')
-				count += ft_putchar((n - 10 + 'A'));
+				count += ft_putchar_v2((n - 10 + 'A'));
 		}
 	}
 	return (count);

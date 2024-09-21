@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivbatist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:42:25 by ivbatist          #+#    #+#             */
-/*   Updated: 2022/12/23 22:43:51 by ivbatist         ###   ########.fr       */
+/*   Updated: 2024/09/21 00:52:39 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../inc/ft_printf.h"
+#include "../libft/libft/inc/libft.h"
 
 int	ft_format(va_list args, char specification)
 {
@@ -18,11 +19,11 @@ int	ft_format(va_list args, char specification)
 
 	x = 0;
 	if (specification == 'i' || specification == 'd')
-		x = ft_putnbr(va_arg(args, int), 1);
+		x = ft_putnbr_v2(va_arg(args, int));
 	else if (specification == 'c')
-		x = ft_putchar(va_arg(args, int));
+		x = ft_putchar_v2(va_arg(args, int));
 	else if (specification == 's')
-		x = ft_putstr(va_arg(args, char *));
+		x = ft_putstr_v2(va_arg(args, char *));
 	else if (specification == 'u')
 		x = ft_print_unsig(va_arg(args, unsigned int), 1);
 	else if (specification == 'p')
@@ -32,7 +33,7 @@ int	ft_format(va_list args, char specification)
 	else if (specification == 'X')
 		x = ft_print_hex(va_arg(args, unsigned int), specification);
 	else if (specification == '%')
-		x = ft_putchar('%');
+		x = ft_putchar_v2('%');
 	return (x);
 }
 
@@ -53,36 +54,9 @@ int	ft_printf(const char *format, ...)
 			i++;
 		}
 		else
-			len += ft_putchar_fd(format[i], 1);
+			len += ft_putchar_v2(format[i]);
 		i++;
 	}
 	va_end(args);
 	return (len);
 }
-
-/*int main(void)
-{
-	//int d = 364;
-	//int c;
-	//char l = 'L';
-	//char *str = "era uma vez";
-	// printf("\n\n printf\n");
-	// c = printf(" char         = %c\n str          = %s\n 
-	pointer      = %p\n dec          = %d\n int          = %i\n 
-	unsigned int = %u\n hexmin       = %x\n hexhigh      = %X\n 
-	percent      = %%\n ", l, str, str, d, d, d, d, d);
-	// printf("\n\n o meu\n");
-	// ft_printf(" char         = %c\n str          = %s\n 
-	pointer      = %p\n dec          = %d\n int          = %i\n 
-	unsigned int = %u\n hexmin       = %x\n hexhigh      = %X\n 
-	percent      = %%\n", l, str, str, d, d, d, d, d);
-
-	// c = printf(" gdfgdfgdfgdgdr %d\n",d);
-	// ft_printf(" gdfgdfgdfgdgdr %d\n",d);
-	// printf(" printf len = %d\n", c);
-
-	ft_printf("ft_printf Hex: %x\n", 55555);
-	printf("printf Hex: %x\n", 55555);
-	return (0);
-}
-*/

@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsig.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivbatist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:48:58 by ivbatist          #+#    #+#             */
-/*   Updated: 2022/12/23 22:49:42 by ivbatist         ###   ########.fr       */
+/*   Updated: 2024/09/21 00:31:32 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../inc/ft_printf.h"
+#include "../libft/libft/inc/libft.h"
 
 static unsigned	int	unsig_number(unsigned int n)
 {

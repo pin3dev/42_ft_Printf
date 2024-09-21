@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivbatist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/23 22:52:22 by ivbatist          #+#    #+#             */
-/*   Updated: 2022/12/23 22:52:38 by ivbatist         ###   ########.fr       */
+/*   Created: 2024/09/21 00:33:06 by pin3dev           #+#    #+#             */
+/*   Updated: 2024/09/21 00:43:31 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../inc/ft_printf.h"
+#include "../libft/libft/inc/libft.h"
 
-int	ft_putstr(char *s)
+int	ft_putchar_v2(char c)
+{
+	return(write(1, &c, STDOUT_FILENO));
+}
+
+int	ft_putstr_v2(char *s)
 {
 	int	i;
 
@@ -20,9 +26,19 @@ int	ft_putstr(char *s)
 	if (!s)
 		return (write(1, "(null)", 6));
 	while (s[i] != '\0')
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
+		i += ft_putchar_v2(s[i]);
+	return (i);
+}
+
+int	ft_putnbr_v2(int n)
+{
+	char	*s;
+	int		i;
+
+	s = ft_itoa(n);
+	i = 0;
+	while (s[i] != '\0')
+		i += ft_putchar_v2(s[i]);
+	free(s);
 	return (i);
 }
