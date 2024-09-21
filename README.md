@@ -20,12 +20,12 @@ The structure of the project focuses on creating a main function, **ft_printf**,
 <!-- The main components include:
 - **Type conversion**: Handling different data types, such as integers and strings.
 - **Format specifiers**: Support for various formatting options like `%d`, `%s`, `%x`, among others.
-- **Formatted output**: Precise control over data display in standard output. 
+- **Formatted output**: Precise control over data display in standard output. -->
 
 ## 🗃️ Documentation
 
 For detailed documentation, including usage examples, please visit the link below:
-<h3 align="center"><a href="https://github.com/pin3dev/42_Printf/wiki">-----ft_Printf Wiki-----</a></h3> -->
+<h3 align="center"><a href="https://github.com/pin3dev/42_Printf/wiki">-----ft_Printf Wiki-----</a></h3> 
 
 ## 🕹️ Compilation and Usage
 
