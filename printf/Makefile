@@ -6,12 +6,12 @@
 #    By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 23:01:52 by ivbatist          #+#    #+#              #
-#    Updated: 2024/09/21 01:10:38 by pin3dev          ###   ########.fr        #
+#    Updated: 2024/09/25 17:02:17 by pin3dev          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-TEST_EXEC = testprintf
+TEST_EXEC = testerprintf
 
 ################################################################################
 # 						Compiler and Flags	Variables						   #
@@ -36,9 +36,9 @@ TESTDIR = test
 ################################################################################
 
 SRC =   $(SRCDIR)/ft_printf.c \
-        $(SRCDIR)/ft_print_hex.c \
-        $(SRCDIR)/ft_print_pointer.c \
-        $(SRCDIR)/ft_print_unsig.c \
+        $(SRCDIR)/hex.c \
+        $(SRCDIR)/pointer.c \
+        $(SRCDIR)/unsig.c \
 		$(SRCDIR)/utils.c \
 
 OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
