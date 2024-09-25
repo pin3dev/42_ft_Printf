@@ -1,11 +1,30 @@
-<h1 align="center">ft_printf</h1>
-<p align="center"> 📖
-<a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#01-ft_Printf">Variadic</a> • 
-<a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#01-ft_Printf">Format</a> • 
-<a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#01-ft_Printf">Limitations</a>
-📖 </p>
+<h1 align="center">ft_Printf</h1>
+<p align="center"> 
+  <img src="https://img.shields.io/badge/grade-100%2F125-green?style=for-the-badge&logo=42&labelColor=gray"/>
+</p>
 
-## 🗣️ Introduction
+<p align="center"> 
+  <a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#01-ft_Printf">
+    <img src="https://img.shields.io/badge/Variadic-blue?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Format-blue?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Limitations-blue?style=for-the-badge"/>
+  </a>
+</p>
+
+<h3>
+  <p align="center"> 
+    <a href="#introduction">Introduction</a> • 
+    <a href="#structure">Structure</a> • 
+    <a href="#docs">Docs</a> • 
+    <a href="#cloning">Cloning</a> • 
+    <a href="#usage">Usage</a> • 
+    <a href="#norms">Norms</a> • 
+    <a href="#theoretical">Theoretical</a>   
+  </p>
+</h3>
+
+
+## 🗣️ Introduction <a id="introduction"></a>
 
 This repository contains the implementation of a custom **printf** function, part of a coding project for the **42 School** program.
 
@@ -13,7 +32,7 @@ The goal of the **ft_printf** project is to recreate the functionality of the st
 
 This implementation supports various format specifiers and data types, making it useful for future projects that cannot rely on the standard C library.
 
-## 🧬 Project Structure
+## 🧬 Project Structure <a id="structure"></a>
 
 The structure of the project focuses on creating a main function, **ft_printf**, which can handle different data types and formatting, such as **strings**, **integers**, **characters**, and **hexadecimals**. The project is composed of several auxiliary functions that manipulate and format these data types as needed.
 
@@ -22,12 +41,22 @@ The structure of the project focuses on creating a main function, **ft_printf**,
 - **Format specifiers**: Support for various formatting options like `%d`, `%s`, `%x`, among others.
 - **Formatted output**: Precise control over data display in standard output. -->
 
-## 🗃️ Documentation
+## 🗃️ Documentation <a id="docs"></a>
 
 For detailed documentation, including usage examples, please visit the link below:
 <h3 align="center"><a href="https://github.com/pin3dev/42_Printf/wiki">-----ft_Printf Wiki-----</a></h3> 
 
-## 🕹️ Compilation and Usage
+## 🫥 Cloning the Repository <a id="cloning"></a>
+
+To clone this repository and compile the project, run the following commands:
+
+```bash
+git clone https://github.com/pin3dev/42_ft_Printf.git
+cd 42_ft_Printf/printf
+```
+This will download the project from GitHub into your local machine in current directory. Once inside the `printf` directory, you must run make to compile the library.  
+
+## 🕹️ Compilation and Usage <a id="usage"></a>
 
 ### Makefile
 
@@ -76,11 +105,11 @@ The **ft_printf** project supports the following format specifiers:
 - `%x`/`%X`: Prints a hexadecimal number (lowercase/uppercase letters).
 - `%%`: Prints the percentage symbol. -->
 
-## ⚠️ Norms and Guidelines Disclaimer
+## ⚠️ Norms and Guidelines Disclaimer <a id="norms"></a>
 
 This project strictly follows the [**42 School Norm**](https://github.com/pin3dev/42_Cursus/blob/b9cd0fe844ddb441d0b3efb98abcee92aee49535/assets/General/norme.en.pdf) coding guidelines, which significantly influenced certain decisions in its implementation. These rules may sometimes lead to seemingly inefficient or unusual solutions, but they were necessary to meet the strict requirements of the school.
 
-## 📖 Theoretical Background
+## 📖 Theoretical Background  <a id="theoretical"></a>
 
 All the theoretical material used to develop this project is organized and can be accessed directly via the link below:
 <h3 align="center"><a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#01-ft_Printf">-----ft_Printf Theoretical-----</a></h3>
