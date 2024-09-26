@@ -44,7 +44,12 @@ The structure of the project focuses on creating a main function, **ft_printf**,
 ## 🗃️ Documentation <a id="docs"></a>
 
 For detailed documentation, including usage examples, please visit the link below:
-<h3 align="center"><a href="https://github.com/pin3dev/42_Printf/wiki">-----ft_Printf Wiki-----</a></h3> 
+
+<p align="center"> 
+  <a href="https://github.com/pin3dev/42_Printf/wiki">
+    <img src="https://img.shields.io/badge/ft_Printf_Docs-lightgreen?style=for-the-badge"/>
+  </a>
+</p>
 
 ## 🫥 Cloning the Repository <a id="cloning"></a>
 
@@ -112,4 +117,9 @@ This project strictly follows the [**42 School Norm**](https://github.com/pin3de
 ## 📖 Theoretical Background  <a id="theoretical"></a>
 
 All the theoretical material used to develop this project is organized and can be accessed directly via the link below:
-<h3 align="center"><a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#01-ft_Printf">-----ft_Printf Theoretical-----</a></h3>
+
+<p align="center"> 
+  <a href="https://github.com/pin3dev/42_Cursus/tree/main/library/#01-ft_Printf">
+    <img src="https://img.shields.io/badge/ft_Printf_Library-gray?style=for-the-badge"/>
+  </a>
+</p>
