@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
-#include "../libft/libft/inc/libft.h"
+#include "../42_Libft/libft/inc/libft.h"
 
 /**
  * @brief Prints a memory address (pointer) in hexadecimal format.
