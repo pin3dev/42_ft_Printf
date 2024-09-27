@@ -6,7 +6,7 @@
 /*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:44:18 by ivbatist          #+#    #+#             */
-/*   Updated: 2024/09/25 15:12:10 by pin3dev          ###   ########.fr       */
+/*   Updated: 2024/09/27 13:52:05 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # include <stdint.h>
 # include <limits.h>
 # include <stdbool.h>
+# include "../../../42_Libft/libft/inc/libft.h"
+
 
 /**
  * @brief Macro to handle printing of unsigned integers in hexadecimal format.

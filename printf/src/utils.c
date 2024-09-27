@@ -6,12 +6,11 @@
 /*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 00:33:06 by pin3dev           #+#    #+#             */
-/*   Updated: 2024/09/25 15:12:50 by pin3dev          ###   ########.fr       */
+/*   Updated: 2024/09/27 13:43:20 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
-#include "../42_Libft/libft/inc/libft.h"
 
 /**
  * @brief Writes a single character to the standard output (stdout).

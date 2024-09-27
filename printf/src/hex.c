@@ -6,12 +6,11 @@
 /*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:45:09 by ivbatist          #+#    #+#             */
-/*   Updated: 2024/09/25 15:10:56 by pin3dev          ###   ########.fr       */
+/*   Updated: 2024/09/27 13:43:00 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
-#include "../42_Libft/libft/inc/libft.h"
 
 /**
  * @brief Recursively prints a number in hexadecimal format.

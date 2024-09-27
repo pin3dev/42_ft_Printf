@@ -6,12 +6,11 @@
 /*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:48:58 by ivbatist          #+#    #+#             */
-/*   Updated: 2024/09/25 15:08:04 by pin3dev          ###   ########.fr       */
+/*   Updated: 2024/09/27 13:43:11 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/ft_printf.h"
-#include "../42_Libft/libft/inc/libft.h"
 
 /**
  * @brief Calculates the number of digits in an unsigned integer.

@@ -6,9 +6,10 @@
 #    By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 23:01:52 by ivbatist          #+#    #+#              #
-#    Updated: 2024/09/25 17:02:17 by pin3dev          ###   ########.fr        #
+#    Updated: 2024/09/27 13:53:22 by pin3dev          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 NAME = libftprintf.a
 TEST_EXEC = testerprintf
@@ -46,7 +47,7 @@ OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 # 							Libft Variables 								   #
 ################################################################################
 
-LIBFT_DIR = 42_Libft/libft 
+LIBFT_DIR = ../../42_Libft/libft 
 LIBFT = $(LIBFT_DIR)/libft.a
 LIBFT_REPO = git@github.com:pin3dev/42_Libft.git
 
@@ -66,7 +67,7 @@ fclean: clean
 	@$(RM) $(NAME) 
 	@$(RM) $(TEST_EXEC) 
 	@$(MAKE) -C $(LIBFT_DIR) fclean
-	@$(RMD) libft
+	@$(RMD) ../../42_Libft/
 	@echo "$(NAME) removed"
 
 re: fclean all
@@ -92,9 +93,9 @@ $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
 $(LIBFT):
-	@if [ ! -d 42_Libft ]; then \
+	@if [ ! -d ../../42_Libft ]; then \
 		echo "Cloning libft from pin3dev repo..."; \
-		git clone $(LIBFT_REPO) 42_Libft; \
+		git clone $(LIBFT_REPO) ../../42_Libft; \
 	fi
 	@$(MAKE) -C $(LIBFT_DIR) 
 
