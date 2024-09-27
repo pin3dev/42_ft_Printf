@@ -28,7 +28,6 @@ RMD = rm -rf
 
 SRCDIR = src
 OBJDIR = obj
-INCDIR = inc
 TESTDIR = test
 
 ################################################################################
