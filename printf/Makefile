@@ -46,7 +46,7 @@ OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 # 							Libft Variables 								   #
 ################################################################################
 
-LIBFT_DIR = libft/libft 
+LIBFT_DIR = 42_Libft/libft 
 LIBFT = $(LIBFT_DIR)/libft.a
 LIBFT_REPO = git@github.com:pin3dev/42_Libft.git
 
@@ -92,9 +92,9 @@ $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
 $(LIBFT):
-	@if [ ! -d libft ]; then \
+	@if [ ! -d 42_Libft ]; then \
 		echo "Cloning libft from pin3dev repo..."; \
-		git clone $(LIBFT_REPO) libft; \
+		git clone $(LIBFT_REPO) 42_Libft; \
 	fi
 	@$(MAKE) -C $(LIBFT_DIR) 
 
