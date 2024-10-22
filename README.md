@@ -86,12 +86,12 @@ To use the **ft_printf** library in your C code, follow the steps below:
 
 1. Include the header in your code:
     ```c
-    #include "printf/inc/ft_printf.h"
+    #include "42_ft_Printf/printf/inc/ft_printf.h"
     ```
 
 2. Compile your code with the library:
     ```bash
-    gcc -Wall -Wextra -Werror my_program.c printf/libftprintf.a -o exe_my_program
+    cc -Wall -Wextra -Werror -o your_exec your_code.c  -L 42_ft_Printf/printf/ -lftprintf -L 42_Libft/libft/ -lft
     ```
 
 3. You can now use the `ft_printf` function in your program as follows:
