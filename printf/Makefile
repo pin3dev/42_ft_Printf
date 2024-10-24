@@ -6,20 +6,42 @@
 #    By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 23:01:52 by ivbatist          #+#    #+#              #
-#    Updated: 2024/09/27 13:53:22 by pin3dev          ###   ########.fr        #
+#    Updated: 2024/10/24 22:41:59 by pin3dev          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+################################################################################
+# 									Graphic	 	 							   #
+################################################################################
+
+RED=\033[0;31m
+GREEN=\033[0;32m
+RESET=\033[0m
+BKGRAY=\033[47;90m
+BKGRAYGREEN=\033[1;92m
+BKGRAYRED=\033[1;91m
+
+################################################################################
+# 									Executable	 	 						   #
+################################################################################
 
 NAME = libftprintf.a
 TEST_EXEC = testerprintf
+
+################################################################################
+# 							Libft Variables 								   #
+################################################################################
+
+LIBFT_DIR = ../../42_Libft/libft 
+LIBFT = $(LIBFT_DIR)/libft.a
+LIBFT_REPO = git@github.com:pin3dev/42_Libft.git
 
 ################################################################################
 # 						Compiler and Flags	Variables						   #
 ################################################################################
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I inc
+CFLAGS = -Wall -Wextra -Werror -I inc -I ../../42_Libft/libft/inc
 RM = rm -f
 RMD = rm -rf
 
@@ -44,14 +66,6 @@ SRC =   $(SRCDIR)/ft_printf.c \
 OBJ = $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 ################################################################################
-# 							Libft Variables 								   #
-################################################################################
-
-LIBFT_DIR = ../../42_Libft/libft 
-LIBFT = $(LIBFT_DIR)/libft.a
-LIBFT_REPO = git@github.com:pin3dev/42_Libft.git
-
-################################################################################
 # 							Manual	Targets		 							   #
 ################################################################################
 
@@ -59,16 +73,13 @@ all: $(LIBFT) $(NAME)
 
 clean:
 	@$(RM) $(OBJ)
-	@$(MAKE) -C $(LIBFT_DIR) clean
-	@$(RMD) $(OBJDIR)
-	@echo "Object files removed"
+	@if [ -d "$(OBJDIR)" ]; then $(RMD) $(OBJDIR); fi
+	@echo "${BKGRAY}Printf:${BKGRAYRED}- Obj${RESET}"
 
 fclean: clean
-	@$(RM) $(NAME) 
-	@$(RM) $(TEST_EXEC) 
-	@$(MAKE) -C $(LIBFT_DIR) fclean
-	@$(RMD) ../../42_Libft/
-	@echo "$(NAME) removed"
+	@$(RM) $(NAME)
+	@if [ -f "$(TEST_EXEC)" ]; then $(RM) $(TEST_EXEC); fi
+	@echo "${BKGRAY}Printf: ${BKGRAYRED}- Exec${RESET}"
 
 re: fclean all
 
@@ -85,23 +96,23 @@ test: all
 # 						Auto Targets 				 						   #
 ################################################################################
 
-$(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
-	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "Build completed"
-
 $(OBJDIR):
 	@mkdir -p $(OBJDIR)
 
+$(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
+	@$(CC) $(CFLAGS) -c $< -o $@
+
 $(LIBFT):
 	@if [ ! -d ../../42_Libft ]; then \
-		echo "Cloning libft from pin3dev repo..."; \
-		git clone $(LIBFT_REPO) ../../42_Libft; \
+		git clone $(LIBFT_REPO) ../../42_Libft > /dev/null 2>&1; \
 	fi
-	@$(MAKE) -C $(LIBFT_DIR) 
+	@printf "${BKGRAY}Libft:${RESET} "; 
+	@$(MAKE) -C $(LIBFT_DIR)
 
 $(NAME): $(OBJ)
-	@ar rc $(NAME) $(OBJ)
-	@echo "Linking only Mandatory Library into $(NAME)"
+	@ar rc $(NAME) $(OBJ) & \
+	./gui_load.sh "Printf" # Exibishion of the loading bar
+	@wait
 
 ################################################################################
 # 										PS		 	 						   #

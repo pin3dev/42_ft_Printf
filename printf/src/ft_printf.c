@@ -6,11 +6,11 @@
 /*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 22:42:25 by ivbatist          #+#    #+#             */
-/*   Updated: 2024/09/27 13:42:54 by pin3dev          ###   ########.fr       */
+/*   Updated: 2024/10/24 21:26:13 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "ft_printf.h"
 
 /**
  * @brief Processes a format specifier and prints the corresponding argument from the variadic list.

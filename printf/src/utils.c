@@ -6,11 +6,11 @@
 /*   By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 00:33:06 by pin3dev           #+#    #+#             */
-/*   Updated: 2024/09/27 13:43:20 by pin3dev          ###   ########.fr       */
+/*   Updated: 2024/10/24 21:26:13 by pin3dev          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/ft_printf.h"
+#include "ft_printf.h"
 
 /**
  * @brief Writes a single character to the standard output (stdout).
