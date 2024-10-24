@@ -6,7 +6,7 @@
 #    By: pin3dev <pinedev@outlook.com>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 23:01:52 by ivbatist          #+#    #+#              #
-#    Updated: 2024/10/24 22:41:59 by pin3dev          ###   ########.fr        #
+#    Updated: 2024/10/25 00:21:52 by pin3dev          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ TESTDIR = test
 ################################################################################
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -I inc -I ../../42_Libft/libft/inc #$(LIBFT_DIR)/inc
+CFLAGS = -Wall -Wextra -Werror -I inc -I $(LIBFT_DIR)/inc
 RM = rm -f
 RMD = rm -rf
 
@@ -45,7 +45,7 @@ RMD = rm -rf
 # 							Libft Variables 								   #
 ################################################################################
 
-LIBFT_DIR = ../../42_Libft/libft 
+LIBFT_DIR = ../../42_Libft/libft
 LIBFT = $(LIBFT_DIR)/libft.a
 LIBFT_REPO = git@github.com:pin3dev/42_Libft.git
 
