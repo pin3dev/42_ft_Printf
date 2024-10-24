@@ -25,29 +25,29 @@ NAME = libftprintf.a
 TEST_EXEC = testerprintf
 
 ################################################################################
-# 							Libft Variables 								   #
-################################################################################
-
-LIBFT_DIR = ../../42_Libft/libft 
-LIBFT = $(LIBFT_DIR)/libft.a
-LIBFT_REPO = git@github.com:pin3dev/42_Libft.git
-
-################################################################################
-# 						Compiler and Flags	Variables						   #
-################################################################################
-
-CC = cc
-CFLAGS = -Wall -Wextra -Werror -I inc -I ../../42_Libft/libft/inc
-RM = rm -f
-RMD = rm -rf
-
-################################################################################
 # 							Dir	Path	Variables 							   #
 ################################################################################
 
 SRCDIR = src
 OBJDIR = obj
 TESTDIR = test
+
+################################################################################
+# 						Compiler and Flags	Variables						   #
+################################################################################
+
+CC = cc
+CFLAGS = -Wall -Wextra -Werror -I inc -I ../../42_Libft/libft/inc #$(LIBFT_DIR)/inc
+RM = rm -f
+RMD = rm -rf
+
+################################################################################
+# 							Libft Variables 								   #
+################################################################################
+
+LIBFT_DIR = ../../42_Libft/libft 
+LIBFT = $(LIBFT_DIR)/libft.a
+LIBFT_REPO = git@github.com:pin3dev/42_Libft.git
 
 ################################################################################
 # 							Files	Path	Variables 						   #
@@ -89,6 +89,17 @@ test: all
 	@./$(TEST_EXEC)
 
 ################################################################################
+# 							Dependencies Targets							   #
+################################################################################
+
+$(LIBFT):
+	@if [ ! -d ../../42_Libft ]; then \
+		git clone $(LIBFT_REPO) ../../42_Libft > /dev/null 2>&1; \
+	fi
+	@printf "${BKGRAY}Libft:${RESET} "; 
+	@$(MAKE) -C $(LIBFT_DIR)
+
+################################################################################
 # 						Auto Targets 				 						   #
 ################################################################################
 
@@ -97,13 +108,6 @@ $(OBJDIR):
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
-
-$(LIBFT):
-	@if [ ! -d ../../42_Libft ]; then \
-		git clone $(LIBFT_REPO) ../../42_Libft > /dev/null 2>&1; \
-	fi
-	@printf "${BKGRAY}Libft:${RESET} "; 
-	@$(MAKE) -C $(LIBFT_DIR)
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ) & \
